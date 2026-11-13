@@ -20,14 +20,15 @@ collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_hghv2")
 
-[node name="HealthComponent" parent="." unique_id=1554534961 node_paths=PackedStringArray("hitbox") instance=ExtResource("2_afpow")]
-hitbox = NodePath("../Hitbox")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=326747811]
 shape = SubResource("CircleShape2D_dfkqw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1004093366]
 texture = SubResource("PlaceholderTexture2D_ne65n")
+
+[node name="HealthComponent" parent="." unique_id=1554534961 node_paths=PackedStringArray("hitbox") instance=ExtResource("2_afpow")]
+hitbox = NodePath("../Hitbox")
+health = 2
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1519313762]
 collision_layer = 4
@@ -43,3 +44,5 @@ script = ExtResource("2_1f0kj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attackbox" unique_id=1127025589]
 shape = SubResource("CircleShape2D_71h6k")
+
+[connection signal="damage_taken" from="HealthComponent" to="." method="_on_damage_taken"]

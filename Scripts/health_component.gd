@@ -1,7 +1,7 @@
 class_name HealthComponent
 extends Node2D
 
-signal damage_taken(damage: int)
+signal damage_taken(damage: int, health: int, area: Area2D)
 
 
 @export var hitbox: Area2D
@@ -15,5 +15,4 @@ func _ready() -> void:
 func process_hit(area: Area2D) -> void:
 	if area is Hurtbox:
 		health -= area.damage
-		print(health)
-		damage_taken.emit(area.damage)
+		damage_taken.emit(area.damage, health, area)
