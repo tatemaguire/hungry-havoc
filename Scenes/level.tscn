@@ -83,7 +83,5 @@ tile_set = SubResource("TileSet_51e2h")
 [node name="Player" parent="." unique_id=127932407 instance=ExtResource("2_k5f4k")]
 position = Vector2(64, 80)
 
-[node name="Enemy" parent="." unique_id=1042307464 node_paths=PackedStringArray("player") instance=ExtResource("3_6phgx")]
+[node name="Enemy" parent="." unique_id=1042307464 instance=ExtResource("3_6phgx")]
 position = Vector2(176, 96)
-player = NodePath("../Player")
-speed = 20.0
