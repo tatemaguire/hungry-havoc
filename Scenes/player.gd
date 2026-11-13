@@ -30,6 +30,7 @@ func _on_damage_taken(_damage: int, health: int, area: Area2D) -> void:
 		kill()
 
 
+## TODO: knockback is incomplete
 func knockback(angle: float) -> void:
 	knockback_vector = Vector2.from_angle(angle) * knockback_strength
 
