@@ -80,5 +80,3 @@ tile_map_data = PackedByteArray("AAAFAAQAAAACAAMAAAAHAAQAAAAFAAMAAAAHAAUAAAAFAAQ
 tile_set = SubResource("TileSet_51e2h")
 
 [node name="Player" parent="." unique_id=127932407 instance=ExtResource("2_k5f4k")]
-collision_layer = 2
-motion_mode = 1
