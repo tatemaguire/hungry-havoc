@@ -28,7 +28,7 @@ texture = SubResource("PlaceholderTexture2D_ne65n")
 
 [node name="HealthComponent" parent="." unique_id=1554534961 node_paths=PackedStringArray("hitbox") instance=ExtResource("2_afpow")]
 hitbox = NodePath("../Hitbox")
-health = 2
+health = 4
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1519313762]
 collision_layer = 4
