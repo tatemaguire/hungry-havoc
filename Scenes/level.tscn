@@ -2632,6 +2632,9 @@ position = Vector2(-816, 502)
 [node name="Crate6" parent="Crates" unique_id=1996845915 instance=ExtResource("9_bvt00")]
 position = Vector2(-69, 97)
 
+[node name="Crate6" parent="Crates" unique_id=1019739792 instance=ExtResource("9_bvt00")]
+position = Vector2(99, 525)
+
 [node name="Enemies" type="Node2D" parent="." unique_id=1131468066]
 
 [node name="EnemyRanged11" parent="Enemies" unique_id=438471102 instance=ExtResource("5_wqkje")]
