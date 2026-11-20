@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bsfmepmhabdh1" path="res://Scenes/crate.tscn" id="9_bvt00"]
 [ext_resource type="Texture2D" uid="uid://mwn5uiinlbj3" path="res://Assets/door.png" id="10_oqgf2"]
 [ext_resource type="Texture2D" uid="uid://x84cm0ygh6ho" path="res://Assets/heart.png" id="11_qxfql"]
+[ext_resource type="Texture2D" uid="uid://carfklw2cvq7k" path="res://Assets/Crate.png" id="12_ha31o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa6b8"]
 texture = ExtResource("4_754fn")
@@ -7534,3 +7535,19 @@ stretch_mode = 2
 layout_mode = 2
 texture = ExtResource("11_qxfql")
 stretch_mode = 2
+
+[node name="CrateStatus" type="CanvasLayer" parent="." unique_id=1272991779]
+
+[node name="TextureRect" type="TextureRect" parent="CrateStatus" unique_id=1613977135]
+offset_left = 4.0
+offset_top = 7.0
+offset_right = 20.0
+offset_bottom = 23.0
+texture = ExtResource("12_ha31o")
+
+[node name="Label" type="Label" parent="CrateStatus" unique_id=502594128]
+offset_left = 24.0
+offset_top = 3.0
+offset_right = 64.0
+offset_bottom = 26.0
+text = "0/5"
