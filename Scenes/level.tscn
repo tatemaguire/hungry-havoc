@@ -2611,8 +2611,11 @@ position = Vector2(133, 79)
 
 [node name="Crate" parent="Crates" unique_id=1486057382 instance=ExtResource("9_bvt00")]
 <<<<<<< HEAD
+<<<<<<< HEAD
 position = Vector2(-500, -218)
 =======
+=======
+>>>>>>> parent of d6f8611 (Removed Testing Crates)
 position = Vector2(117, 525)
 
 [node name="Crate1" parent="Crates" unique_id=438471102 instance=ExtResource("9_bvt00")]
@@ -2638,6 +2641,9 @@ position = Vector2(-816, 502)
 
 [node name="Crate6" parent="Crates" unique_id=1996845915 instance=ExtResource("9_bvt00")]
 position = Vector2(-69, 97)
+
+[node name="Crate6" parent="Crates" unique_id=1019739792 instance=ExtResource("9_bvt00")]
+position = Vector2(99, 525)
 
 [node name="Crate6" parent="Crates" unique_id=1019739792 instance=ExtResource("9_bvt00")]
 position = Vector2(99, 525)
