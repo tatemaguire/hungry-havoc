@@ -19,6 +19,10 @@ signal crate_collected(total: int)
 @onready var bullet_spawn_point: Node2D = $BulletSpawnPoint
 @onready var sprite: Sprite2D = $Sprite2D
 
+@export_group("Dash Dodge")
+@export var dash_distance = 100.0
+@export var invincibility_duration = 0.4 # in seconds
+
 var pizza_scene: PackedScene = preload("res://Scenes/pizza_projectile.tscn")
 
 var input_vector: Vector2 = Vector2.ZERO
@@ -43,6 +47,10 @@ func _process(delta: float) -> void:
 		attack()
 		# Reset cooldown
 		firing_cooldown = 1 / firing_speed
+		
+	if Input.is_action_just_pressed("Dash"):
+		print("DASHED")
+		dash()
 
 func attack() -> void:
 	var pizza: Area2D = pizza_scene.instantiate()
@@ -65,6 +73,17 @@ func movement_input() -> void:
 	
 	# Set velocity
 	velocity = input_vector * speed
+
+# Can double down as a dash or dodge mechanic
+func dash() -> void:
+	var facing: Vector2 = Vector2.RIGHT.rotated(global_rotation)
+	move_and_collide(facing * dash_distance)
+	invincibility()
+
+func invincibility() -> void:
+	set_collision_mask_value(3, false)
+	await get_tree().create_timer(invincibility_duration).timeout
+	set_collision_mask_value(3, true)
 
 
 func rotate_with_movement() -> void:

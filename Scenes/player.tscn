@@ -15,6 +15,7 @@ collision_layer = 2
 collision_mask = 7
 motion_mode = 1
 script = ExtResource("1_cvnsp")
+dash_distance = 40.0
 
 [node name="BulletSpawnPoint" type="Node2D" parent="." unique_id=963326927]
 position = Vector2(12, 0)
