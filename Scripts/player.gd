@@ -3,6 +3,8 @@ extends CharacterBody2D
 
 signal crate_collected(total: int)
 
+@onready var dash_sound: AudioStreamPlayer2D = $DashSound
+
 @export var speed: float = 80
 ## Bullets per second
 @export var firing_speed: float = 2.5
@@ -22,6 +24,7 @@ signal crate_collected(total: int)
 @export_group("Dash Dodge")
 @export var dash_distance = 100.0
 @export var invincibility_duration = 0.4 # in seconds
+
 
 var pizza_scene: PackedScene = preload("res://Scenes/pizza_projectile.tscn")
 
@@ -78,7 +81,7 @@ func movement_input() -> void:
 func dash() -> void:
 	var facing: Vector2 = Vector2.RIGHT.rotated(global_rotation)
 	move_and_collide(facing * dash_distance)
-	invincibility()
+	dash_sound.play()
 
 func invincibility() -> void:
 	set_collision_mask_value(3, false)
